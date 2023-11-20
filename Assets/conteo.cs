@@ -9,6 +9,8 @@ public class conteo : MonoBehaviour
     public GameObject ascensor1;
     public GameObject puerta;
     public GameObject puerta1;
+    public GameObject alarmaP;
+    public GameObject pasos;
    private bool insideTrigger = false;
     private float tiempoDentro = 0f;
     private float tiempoDentroT = 0f;
@@ -39,6 +41,7 @@ public class conteo : MonoBehaviour
                     luz.intensity=1;
                 else
                     luz.intensity=0;
+                
             }
             
         }
@@ -52,7 +55,7 @@ public class conteo : MonoBehaviour
         if(tiempoDentro>=4f && tiempoDentro <8)
         {
             tiempoDentroT += Time.deltaTime;
-             
+             alarmaP.SetActive(true);
             derub = true;
             if (tiempoDentroT>=0.1f&&tiempoDentro>=4f)
             {
@@ -78,6 +81,7 @@ public class conteo : MonoBehaviour
         if (other.CompareTag("Player")) // Asegúrate de ajustar la etiqueta según tus necesidades
         {
             insideTrigger = true;
+            Destroy(pasos);
             Debug.Log("El cubo ha entrado en el trigger.");
         }
     }
