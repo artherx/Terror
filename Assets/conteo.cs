@@ -14,7 +14,7 @@ public class conteo : MonoBehaviour
    private bool insideTrigger = false;
     private float tiempoDentro = 0f;
     private float tiempoDentroT = 0f;
-    private float digitos = 2.5f;
+    private float digitos = 4f;
     private Vector3 pos, pos1;
     public Light luz;
     private Vector3 finalp, finalp1;

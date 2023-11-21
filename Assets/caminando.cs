@@ -8,7 +8,7 @@ public class caminando : MonoBehaviour
     public AudioSource mu;
     public float velo = 1.0f;
     void Start() {
-        final = transform.position + new Vector3(3,0,0);
+        final = transform.position + new Vector3(7,0,0);
         mu.Play();
     }
     
